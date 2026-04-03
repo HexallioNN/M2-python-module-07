@@ -9,7 +9,7 @@ if __name__ == "__main__":
     print(Fire_dragon.get_card_info())
     print("\nPlaying Fire Dragon with 6 mana available:")
     print(f"Playable {Fire_dragon.is_playable(6)}")
-    print(f"Play result: {Fire_dragon.play({})}")
+    print(f"Play result: {Fire_dragon.play({"mana_available": 6})}")
     print("\nFire Dragon attacks Goblin Warrior:")
     print(f"Attack result: {Fire_dragon.attack_target("Goblin Warrior")}")
     print("\nTesting insufficient mana (3 available)")

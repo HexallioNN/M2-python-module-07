@@ -16,9 +16,7 @@ class CreatureCard(Card):
         return base_info
 
     def play(self, game_state: dict) -> dict:
-        if game_state:
-            pass
-        if self.playability:
+        if game_state["mana_available"] > self.cost:
             return {
                 "card_played": self.name,
                 "mana_used": self.cost,
